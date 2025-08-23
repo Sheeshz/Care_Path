@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CadPath</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts: Inter + Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 class="site-title">CadPath</h1>
+    <nav class="tabs">
+      <button class="tab active" id="welcome-tab" onclick="showTab('welcome')">Welcome</button>
+      <button class="tab" id="register-tab" onclick="showTab('register')">Register</button>
+      <button class="tab disabled" id="chatbot-tab" onclick="showTab('chatbot')">Symptom Checker</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Welcome Section -->
+    <section id="welcome-section" class="tab-content">
+      <h2 class="welcome-heading">Welcome to CadPath</h2>
+      <p class="welcome-subtitle">
+        Your trusted companion for quick, AI-powered student health guidance.
+      </p>
+
+      <div class="info-boxes">
+        <div class="info-box">
+          <div class="img-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png" alt="Medicine Icon" />
+          </div>
+          <h3>AI Symptom Checker</h3>
+          <p>Get instant insights about your symptoms with our smart chatbot.</p>
+        </div>
+
+        <div class="info-box">
+          <div class="img-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/2966/2966504.png" alt="Doctor Icon" />
+          </div>
+          <h3>Trusted Guidance</h3>
+          <p>Receive recommendations aligned with campus health best practices.</p>
+        </div>
+
+        <div class="info-box">
+          <div class="img-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/2966/2966533.png" alt="Health Icon" />
+          </div>
+          <h3>24/7 Availability</h3>
+          <p>Our chatbot is always here to support you, anytime, anywhere.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Register Section -->
+    <section id="register-section" class="tab-content hidden">
+      <h2>Register</h2>
+      <form id="register-form" class="register-form">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email Address" required />
+        <input type="text" id="studentId" placeholder="Student ID" required />
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section id="chatbot-section" class="tab-content hidden">
+      <h2>Symptom Checker Chatbot</h2>
+      <div id="chat-container" class="chat-container"></div>
+      <div id="input-area" class="input-area hidden">
+        <button onclick="handleAnswer(true)">Yes</button>
+        <button onclick="handleAnswer(false)">No</button>
+      </div>
+    </section>
+  </main>
+    <!-- ===== Fixed Footer ===== -->
+  <footer>
+    <p>© 2025 CadPath | Student Health Support</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Future React & Tailwind Entry Point -->
+  <!-- <div id="root"></div> -->
+
+  <script src="script.js"></script>
+</body>
+</html>
